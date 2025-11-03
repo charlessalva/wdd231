@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Home page for Charles Nephi Salva's WDD 231 Web Development projects." />
+    <meta name="author" content="Charles Nephi Salva" />
+    <title>WDD 231 | Charles Nephi Salva | Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 231 - Salva</h1>
+    <header>
+        <div class="site-header">
+            <div class="branding">
+                <img src="images/logo.svg" alt="Site logo" class="logo" />
+                <span class="site-name">Site Name</span>
+            </div>
+
+            <button id="menu" aria-label="Open navigation menu">☰</button>
+
+            <nav id="nav-bar">
+                <ul class="navigation">
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="chamber.html">Chamber</a></li>
+                    <li><a href="final.html">Final</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="images/me.jpg" alt="Charles Nephi Salva portrait" class="profile-img" />
+                <p>
+                    Hello! I’m <strong>Charles Nephi Salva</strong> from Pasig City, Philippines.
+                    I’m a BYU-Pathway Worldwide student pursuing a certificate in Web and Computer Programming.
+                    I love building creative digital projects and learning how technology can inspire and improve lives.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-city">
+            <h2>About My City</h2>
+            <div class="city-container">
+                <p>
+                    Pasig City is a vibrant hub in Metro Manila known for its combination of historical charm and modern
+                    development.
+                    From the Ortigas Center skyline to the serene Pasig River, the city harmonizes business growth and
+                    community warmth.
+                </p>
+                <img src="images/pasig.webp" alt="Pasig City skyline" class="city-img" />
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2>Web Development Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+                <li><a href="https://freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
+                <li><a href="https://stackoverflow.com" target="_blank" rel="noopener">Stack Overflow</a></li>
+                <li><a href="https://roadmap.sh" target="_blank" rel="noopener">Developer Roadmaps</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/charlessalva" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn icon" />
+            </a>
+            <a href="https://x.com" target="_blank" aria-label="X">
+                <img src="images/x.svg" alt="X icon" />
+            </a>
+        </div>
+
+        <p>
+            &copy; <span id="currentyear"></span> • Charles Nephi Salva • Philippines
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>

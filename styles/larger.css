@@ -1,0 +1,56 @@
+/* ------------------------------
+   Larger Screen Styles
+------------------------------ */
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    #nav-bar {
+        display: block !important;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .navigation li {
+        border: none;
+    }
+
+    .navigation a {
+        padding: 0.75rem 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .navigation a:hover {
+        background-color: #374151;
+    }
+
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about-container,
+    .city-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-container img {
+        order: 2;
+    }
+
+    .resources ul {
+        columns: 2;
+        column-gap: 2rem;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

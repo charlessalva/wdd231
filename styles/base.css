@@ -1,0 +1,226 @@
+/* ------------------------------
+   Base Styles (Mobile First)
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 1rem;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.site-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* NAVIGATION */
+#menu {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#nav-bar {
+    display: none;
+    background-color: #1f2937;
+    text-align: center;
+}
+
+#nav-bar.show {
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    border-top: 1px solid #374151;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover,
+.navigation .current a {
+    background-color: #374151;
+}
+
+/* MAIN */
+main {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+h2 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+/* SECTIONS */
+.about-container,
+.city-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.profile-img,
+.city-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.resources ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+
+.resources a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+    transition: transform 0.2s;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* COURSES SECTION */
+.courses-section {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-buttons button {
+    background-color: #ddd;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-buttons button.active,
+.course-buttons button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.course-card {
+    background-color: #e9e9e9;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+.course-card.completed {
+    background-color: #c8e6c9;
+    border-left: 5px solid #388e3c;
+}
+
+.credits {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #333;
+}
