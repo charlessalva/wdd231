@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuButton.addEventListener("click", () => {
         navBar.classList.toggle("show");
-        menuButton.textContent = navBar.classList.contains("show") ? "✖" : "☰";
+        menuButton.classList.toggle("open");
+
+        // Accessibility for screen readers
+        const expanded = menuButton.classList.contains("open");
+        menuButton.setAttribute("aria-expanded", expanded);
     });
 });

@@ -1,21 +1,10 @@
-// courses.js
 document.addEventListener("DOMContentLoaded", () => {
-    const main = document.querySelector("main");
-    const courseSection = document.createElement("section");
-    courseSection.classList.add("courses-section");
-    courseSection.innerHTML = `
-    <h2>Web and Computer Programming Certificate Courses</h2>
-    <div class="course-buttons">
-      <button data-filter="all" class="active">All Courses</button>
-      <button data-filter="wdd">WDD Courses</button>
-      <button data-filter="cse">CSE Courses</button>
-    </div>
-    <div id="courseList" class="course-list"></div>
-    <p id="totalCredits" class="credits"></p>
-  `;
-    main.appendChild(courseSection);
+    // Select elements that already exist in your HTML
+    const courseList = document.querySelector(".course-list");
+    const totalCreditsEl = document.querySelector(".course-credits");
+    const buttons = document.querySelectorAll(".filter-btn");
 
-    // Course data (adapted from BYU-Idaho array)
+    // Your course data
     const courses = [
         {
             subject: 'CSE',
@@ -24,10 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
             credits: 2,
             certificate: 'Web and Computer Programming',
             description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-            technology: [
-                'Python'
-            ],
-            completed: false
+            technology: ['Python'],
+            completed: true
         },
         {
             subject: 'WDD',
@@ -35,12 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-            technology: [
-                'HTML',
-                'CSS'
-            ],
-            completed: false
+            description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands-on with students participating in simple web designs and programming.',
+            technology: ['HTML', 'CSS'],
+            completed: true
         },
         {
             subject: 'CSE',
@@ -48,11 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Programming with Functions',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-            technology: [
-                'Python'
-            ],
-            completed: false
+            description: 'Students learn to write, call, debug, and test their own functions and handle errors within them, improving their programming organization and efficiency.',
+            technology: ['Python'],
+            completed: true
         },
         {
             subject: 'CSE',
@@ -60,11 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Programming with Classes',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-            technology: [
-                'C#'
-            ],
-            completed: false
+            description: 'Introduces the concept of classes and objects, encapsulation, inheritance, and polymorphism.',
+            technology: ['C#'],
+            completed: true
         },
         {
             subject: 'WDD',
@@ -72,13 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Dynamic Web Fundamentals',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-            technology: [
-                'HTML',
-                'CSS',
-                'JavaScript'
-            ],
-            completed: false
+            description: 'Students learn to create dynamic websites that use JavaScript to respond to events and create responsive user experiences.',
+            technology: ['HTML', 'CSS', 'JavaScript'],
+            completed: true
         },
         {
             subject: 'WDD',
@@ -86,20 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Frontend Web Development I',
             credits: 2,
             certificate: 'Web and Computer Programming',
-            description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-            technology: [
-                'HTML',
-                'CSS',
-                'JavaScript'
-            ],
+            description: 'Focuses on UX, accessibility, compliance, performance optimization, and basic API usage.',
+            technology: ['HTML', 'CSS', 'JavaScript'],
             completed: false
         }
     ];
 
-    const courseList = document.getElementById("courseList");
-    const totalCreditsEl = document.getElementById("totalCredits");
-    const buttons = document.querySelectorAll(".course-buttons button");
-
+    // Function to render course cards
     function renderCourses(filter = "all") {
         courseList.innerHTML = "";
 
@@ -112,11 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("course-card");
             if (course.completed) card.classList.add("completed");
 
+            // simplified layout — show only course code and check mark if completed
             card.innerHTML = `
-        <h3>${course.subject} ${course.number}</h3>
-        <p>${course.title}</p>
-        <p><strong>${course.credits}</strong> credits</p>
-      `;
+            <h3>${course.subject} ${course.number}
+                ${course.completed ? '<span class="checkmark">✔</span>' : ''}
+            </h3>
+        `;
 
             courseList.appendChild(card);
         });
@@ -125,11 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
         totalCreditsEl.textContent = `Total Credits: ${totalCredits}`;
     }
 
+
+    // Initial render (show all)
     renderCourses();
 
+    // Filter buttons
     buttons.forEach(btn => {
         btn.addEventListener("click", () => {
-            document.querySelector(".course-buttons .active").classList.remove("active");
+            document.querySelector(".filter-btn.active").classList.remove("active");
             btn.classList.add("active");
             renderCourses(btn.dataset.filter);
         });

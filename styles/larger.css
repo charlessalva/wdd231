@@ -2,6 +2,10 @@
    Larger Screen Styles
 ------------------------------ */
 @media screen and (min-width: 768px) {
+    body {
+        padding: 0;
+    }
+
     #menu {
         display: none;
     }
@@ -12,8 +16,8 @@
 
     .navigation {
         display: flex;
-        gap: 1rem;
         justify-content: flex-end;
+        gap: 1rem;
     }
 
     .navigation li {
@@ -22,35 +26,54 @@
 
     .navigation a {
         padding: 0.75rem 1rem;
+        border: 2px solid transparent;
+        /* prevents twitching */
         transition: background-color 0.3s;
     }
 
-    .navigation a:hover {
+    .navigation a:hover,
+    .navigation .current a {
         background-color: #374151;
+        border-color: #374151;
     }
 
     main {
         width: 90%;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 1rem auto;
     }
 
-    .about-container,
-    .city-container {
-        flex-direction: row;
-        align-items: center;
+    /* Two-column about/photo section */
+    .about-me,
+    .student-photo {
+        margin-bottom: 0;
+        /* remove extra gaps */
     }
 
-    .about-container img {
-        order: 2;
+    .about-photo-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
-    .resources ul {
-        columns: 2;
-        column-gap: 2rem;
+    .about-me p {
+        padding: 1rem;
     }
 
+    .student-photo img {
+        max-width: 100%;
+    }
+
+    /* Courses grid */
     .course-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    footer {
+        margin-top: 2rem;
     }
 }
