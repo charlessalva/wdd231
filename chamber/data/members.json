@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Alpha Solutions Inc.",
+        "address": "123 Main Street, Pasig City",
+        "phone": "+63 912 345 6789",
+        "website": "https://alpha-solutions.example.com",
+        "image": "alpha.png",
+        "membership": 3,
+        "description": "Premium IT services and consulting."
+    },
+    {
+        "name": "Bluewave Marketing",
+        "address": "45 Business Ave, Quezon City",
+        "phone": "+63 933 222 1111",
+        "website": "https://bluewave.example.com",
+        "image": "bluewave.png",
+        "membership": 2,
+        "description": "Branding and advertising for SMEs."
+    },
+    {
+        "name": "Coffee Hub",
+        "address": "56 Corner St., Makati City",
+        "phone": "+63 927 555 8888",
+        "website": "https://coffeehub.example.com",
+        "image": "coffeehub.png",
+        "membership": 1,
+        "description": "Local coffee supplier for offices."
+    },
+    {
+        "name": "DigiPrint Graphics",
+        "address": "22 Printway Lane, Mandaluyong City",
+        "phone": "+63 921 333 4444",
+        "website": "https://digiprint.example.com",
+        "image": "digiprint.png",
+        "membership": 1,
+        "description": "Digital and offset printing services."
+    },
+    {
+        "name": "Evergreen Landscaping",
+        "address": "89 Garden Road, Antipolo City",
+        "phone": "+63 939 444 7777",
+        "website": "https://evergreen.example.com",
+        "image": "evergreen.png",
+        "membership": 2,
+        "description": "Eco-friendly landscaping and outdoor design."
+    },
+    {
+        "name": "FreshMart Grocers",
+        "address": "7 Sunrise Ave, Marikina City",
+        "phone": "+63 995 234 1122",
+        "website": "https://freshmart.example.com",
+        "image": "freshmart.png",
+        "membership": 1,
+        "description": "Local supermarket offering fresh produce and essentials."
+    },
+    {
+        "name": "GoldenPeak Finance",
+        "address": "101 Finance Tower, Ortigas Center",
+        "phone": "+63 917 800 5544",
+        "website": "https://goldenpeak.example.com",
+        "image": "goldenpeak.png",
+        "membership": 3,
+        "description": "Financial solutions, business loans, and investment services."
+    },
+    {
+        "name": "HealthFirst Clinic",
+        "address": "310 Wellness St., Pasig City",
+        "phone": "+63 933 090 1123",
+        "website": "https://healthfirst.example.com",
+        "image": "healthfirst.png",
+        "membership": 2,
+        "description": "General health clinic and medical testing center."
+    },
+    {
+        "name": "Inspire Fitness",
+        "address": "Gymline Building, Cainta Rizal",
+        "phone": "+63 999 555 8899",
+        "website": "https://inspirefitness.example.com",
+        "image": "inspirefitness.png",
+        "membership": 1,
+        "description": "Community fitness center offering classes and personal training."
+    },
+    {
+        "name": "JadeTech Electronics",
+        "address": "54 Circuit Ave, Taguig City",
+        "phone": "+63 920 441 6688",
+        "website": "https://jadetech.example.com",
+        "image": "jadetech.png",
+        "membership": 3,
+        "description": "Consumer electronics distributor and support provider."
+    }
+]
