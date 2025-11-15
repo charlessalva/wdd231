@@ -1,7 +1,7 @@
 [
     {
         "name": "Alpha Solutions Inc.",
-        "address": "123 Main Street, Pasig City",
+        "address": "123 Main Street, Barangay San Antonio, Pasig City 1605",
         "phone": "+63 912 345 6789",
         "website": "https://alpha-solutions.example.com",
         "image": "alpha.png",
@@ -10,7 +10,7 @@
     },
     {
         "name": "Bluewave Marketing",
-        "address": "45 Business Ave, Quezon City",
+        "address": "45 Market Avenue, Barangay Kapitolyo, Pasig City 1603",
         "phone": "+63 933 222 1111",
         "website": "https://bluewave.example.com",
         "image": "bluewave.png",
@@ -19,7 +19,7 @@
     },
     {
         "name": "Coffee Hub",
-        "address": "56 Corner St., Makati City",
+        "address": "56 Pioneer Corner St., Barangay Kapitolyo, Pasig City 1603",
         "phone": "+63 927 555 8888",
         "website": "https://coffeehub.example.com",
         "image": "coffeehub.png",
@@ -28,7 +28,7 @@
     },
     {
         "name": "DigiPrint Graphics",
-        "address": "22 Printway Lane, Mandaluyong City",
+        "address": "22 Printway Lane, Barangay San Miguel, Pasig City 1600",
         "phone": "+63 921 333 4444",
         "website": "https://digiprint.example.com",
         "image": "digiprint.png",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Evergreen Landscaping",
-        "address": "89 Garden Road, Antipolo City",
+        "address": "89 Green Park Road, Barangay Santolan, Pasig City 1610",
         "phone": "+63 939 444 7777",
         "website": "https://evergreen.example.com",
         "image": "evergreen.png",
@@ -46,7 +46,7 @@
     },
     {
         "name": "FreshMart Grocers",
-        "address": "7 Sunrise Ave, Marikina City",
+        "address": "7 Sunrise Avenue, Barangay Rosario, Pasig City 1609",
         "phone": "+63 995 234 1122",
         "website": "https://freshmart.example.com",
         "image": "freshmart.png",
@@ -55,7 +55,7 @@
     },
     {
         "name": "GoldenPeak Finance",
-        "address": "101 Finance Tower, Ortigas Center",
+        "address": "101 Finance Tower, Ortigas Center, Barangay San Antonio, Pasig City 1605",
         "phone": "+63 917 800 5544",
         "website": "https://goldenpeak.example.com",
         "image": "goldenpeak.png",
@@ -64,7 +64,7 @@
     },
     {
         "name": "HealthFirst Clinic",
-        "address": "310 Wellness St., Pasig City",
+        "address": "310 Wellness Street, Barangay Manggahan, Pasig City 1611",
         "phone": "+63 933 090 1123",
         "website": "https://healthfirst.example.com",
         "image": "healthfirst.png",
@@ -73,7 +73,7 @@
     },
     {
         "name": "Inspire Fitness",
-        "address": "Gymline Building, Cainta Rizal",
+        "address": "Gymline Building, Ortigas Avenue Extension, Barangay Rosario, Pasig City 1609",
         "phone": "+63 999 555 8899",
         "website": "https://inspirefitness.example.com",
         "image": "inspirefitness.png",
@@ -82,7 +82,7 @@
     },
     {
         "name": "JadeTech Electronics",
-        "address": "54 Circuit Ave, Taguig City",
+        "address": "54 Circuit Avenue, Barangay Bagong Ilog, Pasig City 1600",
         "phone": "+63 920 441 6688",
         "website": "https://jadetech.example.com",
         "image": "jadetech.png",

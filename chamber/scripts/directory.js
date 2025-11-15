@@ -25,7 +25,6 @@ function displayMembers(members) {
             <p>${member.address}</p>
             <p>${member.phone}</p>
             <a href="${member.website}" target="_blank">Visit Website</a>
-            <p class="membership-level">Level: ${member.membership}</p>
         `;
 
         container.appendChild(card);
@@ -40,6 +39,14 @@ gridBtn.addEventListener("click", () => {
 listBtn.addEventListener("click", () => {
     container.classList.add("list-view");
     container.classList.remove("grid-view");
+});
+
+document.querySelectorAll('.view-toggle .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelector('.view-toggle .filter-btn.active')
+                ?.classList.remove('active');
+            btn.classList.add('active');
+        });
 });
 
 loadMembers();
