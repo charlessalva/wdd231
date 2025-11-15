@@ -5,3 +5,56 @@ img[loading="lazy"] {
     /* Optional small optimization */
     content-visibility: auto;
 }
+
+/* FOOTER LAYOUT FOR DIRECTORY PAGE */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+}
+
+/* Columns */
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+/* Center column (social links) stays centered */
+.footer-center {
+    text-align: center;
+}
+
+/* Right column is right-aligned */
+.footer-right {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+/* Make email clickable and styled */
+.footer-left a {
+    color: #9ab4ff;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        text-align: center;
+    }
+}
