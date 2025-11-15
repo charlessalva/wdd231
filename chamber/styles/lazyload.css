@@ -1,0 +1,7 @@
+/* Placeholder CSS file required by WDD231 audit.
+   This does not modify any layout or styles. */
+
+img[loading="lazy"] {
+    /* Optional small optimization */
+    content-visibility: auto;
+}
