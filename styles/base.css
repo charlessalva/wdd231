@@ -35,8 +35,8 @@ header {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .site-name {
@@ -144,7 +144,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.filter-btn {
+.filter-btn, .hero-btn {
     background-color: #ddd;
     border: none;
     padding: 0.5rem 1rem;
@@ -153,8 +153,8 @@ section {
     cursor: pointer;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
+.filter-btn.active,.hero-btn.active,
+.filter-btn:hover, .hero-btn:hover {
     background-color: #1f2937;
     color: #fff;
 }

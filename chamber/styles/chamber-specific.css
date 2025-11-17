@@ -6,6 +6,75 @@ img[loading="lazy"] {
     content-visibility: auto;
 }
 
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #fff;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* EVENTS BOX */
+.events-box h2 {
+    background: #1f2937;
+    color: white;
+    padding: .5rem;
+}
+
+.events-content {
+    height: 180px;
+    background: #e7e7e7;
+}
+
+/* WEATHER SECTIONS */
+.weather-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.current-weather h2,
+.forecast h2 {
+    background: #1f2937;
+    color: white;
+    padding: .5rem;
+}
+
+.current-weather,
+.forecast {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* BUSINESS CARDS */
+.business-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
 /* FOOTER LAYOUT FOR DIRECTORY PAGE */
 .footer-container {
     display: flex;

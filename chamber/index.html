@@ -4,27 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Pasig City Chamber of Commerce</title>
-    <meta name="description"
-        content="Business directory for our Chamber of Commerce, listing members, contact details, and membership levels.">
+    <meta name="description" content="Pasig City Chamber of Commerce homepage.">
     <meta name="author" content="Charles Nephi Salva">
 
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- Facebook -->
-    <meta property="og:title" content="Chamber Directory" />
-    <meta property="og:description" content="Explore our Pasig City Chamber of Commerce members and their services." />
-    <meta property="og:image" content="https://charlessalva.github.io/wdd231/chamber/images/pasig-city-chamber-of-commerce.png">
-    <meta property="og:url" content="https://charlessalva.github.io/wdd231/chamber/directory.html" />
-    <meta property="og:type" content="website" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-specific.css">
     <link rel="stylesheet" href="../styles/base.css">
@@ -33,6 +22,7 @@
     <!-- Scripts -->
     <script defer src="../scripts/navigation.js"></script>
     <script defer src="../scripts/date.js"></script>
+    <script defer src="scripts/weather.js"></script>
     <script defer src="scripts/directory.js"></script>
 </head>
 
@@ -41,23 +31,87 @@
         <div class="site-header">
             <div class="branding">
                 <img src="images/logo.svg" alt="Site logo" class="logo" />
-                <span class="site-name">Business Directory</span>
+                <span class="site-name">Pasig City Chamber of Commerce</span>
             </div>
-
             <button id="menu" aria-label="Open navigation menu">☰</button>
 
             <nav id="nav-bar">
                 <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="index.html">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
-                    <li class="current"><a href="directory.html">Business Directory</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="directory-page">
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/pasig-city-chamber-of-commerce.png" alt="Hero Image">
+            <button class="hero-btn">Tickets</button>
+        </section>
+
+        <h1>Home</h1>
+
+        <!-- EVENTS -->
+        <section class="events-box">
+            <h2>Events</h2>
+            <div class="events-content"></div>
+        </section>
+
+        <!-- WEATHER -->
+        <div class="weather-wrapper">
+
+            <!-- CURRENT WEATHER -->
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+
+                <div class="weather-info">
+
+                    <div class="weather-main">
+                        <img id="weather-icon" alt="Weather Icon">
+                        <p class="temp"><span id="current-temp"></span>°C</p>
+                    </div>
+
+                    <p id="weather-desc"></p>
+
+                    <p>High: <span id="high-temp"></span>°C</p>
+                    <p>Low: <span id="low-temp"></span>°C</p>
+                    <p>Humidity: <span id="humidity"></span>%</p>
+                    <p>Sunrise: <span id="sunrise"></span></p>
+                    <p>Sunset: <span id="sunset"></span></p>
+                </div>
+            </section>
+
+            <!-- FORECAST -->
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+
+                <p>
+                    Today:
+                    <img id="today-icon" class="forecast-icon" alt="">
+                    <span id="today-temp"></span>°C
+                </p>
+
+                <p>
+                    Wednesday:
+                    <img id="wed-icon" class="forecast-icon" alt="">
+                    <span id="wed-temp"></span>°C
+                </p>
+
+                <p>
+                    Thursday:
+                    <img id="thu-icon" class="forecast-icon" alt="">
+                    <span id="thu-temp"></span>°C
+                </p>
+
+            </section>
+
+        </div>
+
         <h1>Business Directory</h1>
 
         <div class="view-toggle">
@@ -65,15 +119,13 @@
             <button class="filter-btn" id="list-btn">List View</button>
         </div>
 
-        <section id="members-container" class="grid-view">
-            <!-- Cards generated by JS -->
-        </section>
+        <section id="members-container" class="grid-view"></section>
+
     </main>
 
     <footer>
         <div class="footer-container">
-    
-            <!-- LEFT COLUMN -->
+
             <div class="footer-left">
                 <strong>Pasig City Chamber of Commerce</strong><br>
                 10 Market Avenue, Barangay San Nicolas<br>
@@ -81,8 +133,7 @@
                 <a href="mailto:info@pasigchamber.org">info@pasigchamber.org</a><br>
                 +(63) 994-901-3342
             </div>
-    
-            <!-- CENTER COLUMN -->
+
             <div class="footer-center">
                 <div class="social-links">
                     <a href="https://github.com/charlessalva" target="_blank">
@@ -96,14 +147,14 @@
                     </a>
                 </div>
             </div>
-    
-            <!-- RIGHT COLUMN -->
+
             <div class="footer-right">
-                <p>WDD231 Class Project • Charles Nephi Salva</p>
+                <p>WDD231 Class Project</p>
+                <p>Charles Nephi Salva</p>
                 <p>&copy; <span id="currentyear"></span> Pasig City Chamber of Commerce</p>
                 <p>Last Modified: <span id="lastModified"></span></p>
             </div>
-    
+
         </div>
     </footer>
 
