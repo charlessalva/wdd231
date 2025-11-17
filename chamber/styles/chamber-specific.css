@@ -106,12 +106,13 @@ img[loading="lazy"] {
 }
 
 /* Make email clickable and styled */
-.footer-left a {
+.footer-left a,
+.footer-right a {
     color: #9ab4ff;
     text-decoration: none;
 }
 
-.footer-left a:hover {
+.footer-left a:hover, .footer-right a:hover {
     text-decoration: underline;
 }
 
