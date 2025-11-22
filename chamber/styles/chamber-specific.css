@@ -86,16 +86,6 @@ img[loading="lazy"] {
     margin-bottom: 0.5rem;
 }
 
-.events-box h2 {
-    background-color: #1f2937;
-    color: #fff;
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-}
 
 /* EVENT CARDS CONTAINER — now horizontal layout */
 #events-container {
