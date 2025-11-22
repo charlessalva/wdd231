@@ -125,7 +125,7 @@ section {
     width: 100%;
     max-width: 300px;
     display: block;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1rem;
     border-radius: 6px;
     object-fit: cover;
 }
@@ -144,7 +144,8 @@ section {
     margin-bottom: 1rem;
 }
 
-.filter-btn, .hero-btn {
+.filter-btn,
+.hero-btn {
     background-color: #ddd;
     border: none;
     padding: 0.5rem 1rem;
@@ -153,8 +154,10 @@ section {
     cursor: pointer;
 }
 
-.filter-btn.active,.hero-btn.active,
-.filter-btn:hover, .hero-btn:hover {
+.filter-btn.active,
+.hero-btn.active,
+.filter-btn:hover,
+.hero-btn:hover {
     background-color: #1f2937;
     color: #fff;
 }
@@ -167,7 +170,7 @@ section {
 .course-card {
     padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .completed {

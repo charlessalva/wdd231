@@ -42,11 +42,6 @@
         margin: 1rem auto;
     }
 
-    .about-me,
-    .student-photo {
-        margin-bottom: 0;
-    }
-
     .about-photo-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -63,7 +58,6 @@
     }
 
     .course-list {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1rem;
         justify-items: center;
