@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasig City Chamber of Commerce</title>
-    <meta name="description" content="Pasig City Chamber of Commerce homepage.">
-    <meta name="author" content="Charles Nephi Salva">
+    <meta name="description" content="The Pasig City Chamber of Commerce supports local businesses through networking, advocacy, and growth opportunities. Join Pasig’s leading business community.">
+    <meta name="author" content="Charles Nephi Salva" >
 
     <link rel="icon" href="favicon.ico">
     
@@ -24,6 +24,14 @@
     <script defer src="../scripts/date.js"></script>
     <script defer src="scripts/weather.js"></script>
     <script defer src="scripts/directory.js"></script>
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Pasig City Chamber of Commerce - Empowering Local Businesses" />
+    <meta property="og:description" content="Connecting and strengthening Pasig City’s business community through networking, advocacy, and growth opportunities. Join Pasig’s leading chamber for entrepreneurs and enterprises." />
+    <meta property="og:image"
+        content="https://charlessalva.github.io/wdd231/chamber/images/pasig-city-chamber-of-commerce.png">
+    <meta property="og:url" content="https://charlessalva.github.io/wdd231/chamber/index.html" />
+    <meta property="og:type" content="website" />
 </head>
 
 <body>
@@ -47,14 +55,12 @@
     </header>
 
     <main>
-
+        <h1>Home</h1>
         <!-- HERO -->
         <section class="hero">
             <img src="images/pasig-city.png" alt="Hero Image">
             <button class="hero-btn">Tickets</button>
         </section>
-
-        <h1>Home</h1>
 
         <!-- EVENTS -->
         <section class="events-box">
@@ -111,15 +117,6 @@
             </section>
 
         </div>
-
-        <h1>Business Directory</h1>
-
-        <div class="view-toggle">
-            <button class="filter-btn active" id="grid-btn">Grid View</button>
-            <button class="filter-btn" id="list-btn">List View</button>
-        </div>
-
-        <section id="members-container" class="grid-view"></section>
 
     </main>
 
