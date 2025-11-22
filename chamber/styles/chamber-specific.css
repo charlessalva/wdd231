@@ -10,10 +10,13 @@ img[loading="lazy"] {
 .hero {
     position: relative;
     width: 100%;
-    height: 260px;
+    height: 260px; /* Increased height for better visual presence */
     overflow: hidden;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Increased margin for spacing */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero img {
@@ -22,28 +25,146 @@ img[loading="lazy"] {
     object-fit: cover;
 }
 
-.hero-btn {
+/* Hero Overlay */
+.hero-overlay {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background: #fff;
-    border: none;
-    padding: .5rem 1rem;
-    border-radius: 6px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+    padding: 1.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+/* Hero Heading */
+.hero-overlay h1 {
+    font-size: 2.5rem; /* Larger font size for readability */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    max-width: 90%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Hero CTA Button */
+.cta-btn {
+    background-color: #fff;
+    color: #1f2937;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #374151;
+    color: #fff;
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.cta-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1f2937;
 }
 
 /* EVENTS BOX */
-.events-box h2 {
-    background: #1f2937;
-    color: white;
-    padding: .5rem;
+.events-box {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.events-content {
-    height: 180px;
-    background: #e7e7e7;
+.events-box h2 {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+/* EVENT CARDS CONTAINER — now horizontal layout */
+#events-container {
+    display: flex;
+    gap: 1rem;
+    /* space between cards */
+    flex-wrap: wrap;
+    /* allows wrapping on smaller screens */
+    justify-content: center;
+    /* centers cards horizontally */
+    padding: 1rem;
+}
+
+/* Event Card */
+.event-card {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 300px;
+    /* makes them vertical cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Event Title */
+.event-card .event-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+/* Event Date and Location */
+.event-card .event-date,
+.event-card .event-location {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+/* Event Description */
+.event-card .event-description {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* EVENT CARD BUTTON */
+.event-card .cta-btn {
+    background-color: #1f2937;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.event-card .cta-btn:hover {
+    background-color: #374151;
 }
 
 /* WEATHER SECTIONS */
@@ -51,6 +172,7 @@ img[loading="lazy"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    padding: 2rem;
 }
 
 .current-weather h2,
@@ -65,7 +187,41 @@ img[loading="lazy"] {
     background: white;
     padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.weather-main {
+    display: flex;
+    align-items: center;
+}
+
+#weather-icon {
+    width: 50px;
+    /* Set a fixed size for weather icon */
+    height: 50px;
+    margin-right: 1rem;
+}
+
+/* Forecast Section */
+.forecast-day {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.forecast-day img {
+    width: 40px;
+    /* Size the forecast icons */
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.forecast-day p {
+    margin: 0;
+    font-weight: bold;
+}
+
+
 
 /* BUSINESS CARDS */
 .business-cards {
@@ -127,4 +283,21 @@ img[loading="lazy"] {
     .footer-right {
         text-align: center;
     }
+
+    /* Mobile-specific Hero adjustments */
+    .hero {
+        height: 250px; /* Reduced height for mobile */
+        padding: 1rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-btn {
+        padding: 0.8rem 1.5rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Smaller font size on mobile */
+    }
 }
+

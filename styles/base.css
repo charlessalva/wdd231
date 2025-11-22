@@ -214,7 +214,8 @@ footer {
     margin-bottom: 1rem;
 }
 
-#members-container.grid-view {
+#members-container.grid-view,
+#spotlight-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 1rem;
@@ -226,7 +227,8 @@ footer {
     padding: 1rem;
 }
 
-.member-card {
+.member-card,
+.spotlight-card {
     background: var(--card-bg, #fff);
     padding: 1rem;
     border-radius: 8px;
@@ -234,7 +236,8 @@ footer {
     text-align: center;
 }
 
-.member-card img {
+.member-card img,
+.spotlight-card img {
     width: 100%;
     height: 150px;
     object-fit: contain;
