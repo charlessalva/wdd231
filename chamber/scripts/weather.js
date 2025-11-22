@@ -12,13 +12,17 @@ const sunsetEl = document.querySelector("#sunset");
 const iconEl = document.querySelector("#weather-icon");
 
 // Forecast elements
-const todayTemp = document.querySelector("#today-temp");
-const wedTemp = document.querySelector("#wed-temp");
-const thuTemp = document.querySelector("#thu-temp");
+const day1Name = document.querySelector("#day1-name");
+const day2Name = document.querySelector("#day2-name");
+const day3Name = document.querySelector("#day3-name");
 
-const todayIcon = document.querySelector("#today-icon");
-const wedIcon = document.querySelector("#wed-icon");
-const thuIcon = document.querySelector("#thu-icon");
+const day1Temp = document.querySelector("#day1-temp");
+const day2Temp = document.querySelector("#day2-temp");
+const day3Temp = document.querySelector("#day3-temp");
+
+const day1Icon = document.querySelector("#day1-icon");
+const day2Icon = document.querySelector("#day2-icon");
+const day3Icon = document.querySelector("#day3-icon");
 
 function formatTime(ts) {
     return new Date(ts * 1000).toLocaleTimeString([], {
@@ -55,16 +59,19 @@ async function loadForecast() {
     const midday = data.list.filter(item => item.dt_txt.includes("12:00:00"));
 
     // Day 1
-    todayTemp.textContent = Math.round(midday[0].main.temp);
-    todayIcon.src = `https://openweathermap.org/img/wn/${midday[0].weather[0].icon}.png`;
+    day1Name.textContent = new Date(midday[0].dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+    day1Temp.textContent = Math.round(midday[0].main.temp);
+    day1Icon.src = `https://openweathermap.org/img/wn/${midday[0].weather[0].icon}.png`;
 
     // Day 2
-    wedTemp.textContent = Math.round(midday[1].main.temp);
-    wedIcon.src = `https://openweathermap.org/img/wn/${midday[1].weather[0].icon}.png`;
+    day2Name.textContent = new Date(midday[1].dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+    day2Temp.textContent = Math.round(midday[1].main.temp);
+    day2Icon.src = `https://openweathermap.org/img/wn/${midday[1].weather[0].icon}.png`;
 
     // Day 3
-    thuTemp.textContent = Math.round(midday[2].main.temp);
-    thuIcon.src = `https://openweathermap.org/img/wn/${midday[2].weather[0].icon}.png`;
+    day3Name.textContent = new Date(midday[2].dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+    day3Temp.textContent = Math.round(midday[2].main.temp);
+    day3Icon.src = `https://openweathermap.org/img/wn/${midday[2].weather[0].icon}.png`;
 }
 
 loadCurrentWeather();

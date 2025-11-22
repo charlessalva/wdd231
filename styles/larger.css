@@ -27,7 +27,6 @@
     .navigation a {
         padding: 0.75rem 1rem;
         border: 2px solid transparent;
-        /* prevents twitching */
         transition: background-color 0.3s;
     }
 
@@ -43,11 +42,9 @@
         margin: 1rem auto;
     }
 
-    /* Two-column about/photo section */
     .about-me,
     .student-photo {
         margin-bottom: 0;
-        /* remove extra gaps */
     }
 
     .about-photo-wrapper {
@@ -65,7 +62,6 @@
         max-width: 100%;
     }
 
-    /* Courses grid */
     .course-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
