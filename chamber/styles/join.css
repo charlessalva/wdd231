@@ -85,8 +85,6 @@
     font-weight: 500;
 }
 
-/* Submit Button */
-
 .cta-btn {
     margin-top: 1rem;
     padding: 0.8rem 1.2rem;
@@ -124,6 +122,11 @@
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
 }
 
 .membership-cards .card:hover {
@@ -143,7 +146,6 @@
 }
 
 /* Card Accent Colors */
-
 .card.np {
     border-left: 6px solid #3d7d46;
 }
@@ -160,18 +162,7 @@
     border-left: 6px solid #d4af37;
 }
 
-/* =========================================================
-   MEMBERSHIP CARD LOAD ANIMATION
-========================================================= */
-
-/* Animation: cards fade + float up */
-.membership-cards .card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease-out forwards;
-}
-
-/* Staggered delays */
+/* Staggered Animation Delays */
 .membership-cards .card:nth-child(1) {
     animation-delay: .2s;
 }
@@ -206,11 +197,10 @@
 
 .modal {
     display: none;
-    /* JS toggles to flex */
     position: fixed;
     inset: 0;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
     z-index: 10000;

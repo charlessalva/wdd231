@@ -134,7 +134,7 @@ img[loading="lazy"] {
     color: #6b7280;
 }
 
-.event-card .cta-btn {
+.event-card {
     background-color: #1f2937;
     color: #fff;
     padding: 0.6rem 1.2rem;
@@ -147,7 +147,7 @@ img[loading="lazy"] {
     transition: background-color 0.3s ease;
 }
 
-.event-card .cta-btn:hover {
+.event-card {
     background-color: #374151;
 }
 
@@ -195,7 +195,7 @@ img[loading="lazy"] {
     margin-bottom: 1rem;
 }
 
-foreCast-day img {
+.forecast-day img {
     width: 40px;
     height: 40px;
     margin-right: 0.5rem;
