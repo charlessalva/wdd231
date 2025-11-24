@@ -2,11 +2,40 @@
    General / Global
 =============================== */
 
-/* Lazy loading optimization */
 img[loading="lazy"] {
     content-visibility: auto;
 }
 
+/* ============================
+   Global CTA Button
+   (Unified white pill style)
+=============================== */
+.cta-btn {
+    background-color: #fff;
+    color: #1f2937;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.cta-btn:hover {
+    background-color: #374151;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.cta-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1f2937;
+}
 
 /* ============================
    Hero Section
@@ -50,39 +79,13 @@ img[loading="lazy"] {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #fff;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px;
 }
 
-
-/* CTA Button (global) */
-.cta-btn {
-    background-color: #fff;
-    color: #1f2937;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.cta-btn:hover {
-    background-color: #374151;
-    color: #fff;
-    transform: scale(1.1);
-}
-
-.cta-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #1f2937;
-}
-
-
 /* ============================
-   Events
+   Events — Cleaned
 =============================== */
 
 .events-box {
@@ -100,6 +103,7 @@ img[loading="lazy"] {
     padding: 1rem;
 }
 
+/* Finalized LIGHT event-card (no duplicates) */
 .event-card {
     background-color: #f9fafb;
     border: 1px solid #e2e8f0;
@@ -133,24 +137,6 @@ img[loading="lazy"] {
     font-size: 0.9rem;
     color: #6b7280;
 }
-
-.event-card {
-    background-color: #1f2937;
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.event-card {
-    background-color: #374151;
-}
-
 
 /* ============================
    Weather
@@ -206,7 +192,6 @@ img[loading="lazy"] {
     font-weight: bold;
 }
 
-
 /* ============================
    Business Cards
 =============================== */
@@ -217,7 +202,6 @@ img[loading="lazy"] {
     gap: 1rem;
     margin-top: 1.5rem;
 }
-
 
 /* ============================
    Footer
@@ -260,13 +244,11 @@ img[loading="lazy"] {
     text-decoration: underline;
 }
 
-
 /* ============================
    Responsive
 =============================== */
 
 @media (max-width: 768px) {
-
     .footer-container {
         flex-direction: column;
         text-align: center;
