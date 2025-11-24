@@ -1,6 +1,6 @@
-/* ============================
-   JOIN PAGE — Layout
-============================ */
+/* =========================================================
+   JOIN PAGE — Main Layout
+========================================================= */
 
 .join-main {
     max-width: 1200px;
@@ -20,16 +20,16 @@
     font-weight: 700;
 }
 
-/* ============================
+/* =========================================================
    FORM STYLING
-============================ */
+========================================================= */
 
 .join-form-section {
     flex: 1;
     background: #fff;
     padding: 1.5rem;
-    border-radius: 10px;
     border: 2px solid #e5e5e5;
+    border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
@@ -42,17 +42,17 @@
 .join-form label {
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
     font-weight: 600;
     color: #333;
-    gap: 0.3rem;
 }
 
 .join-form input,
 .join-form textarea {
     padding: 0.7rem;
+    font-size: 1rem;
     border: 2px solid #d1d1d1;
     border-radius: 6px;
-    font-size: 1rem;
 }
 
 .join-form textarea {
@@ -67,8 +67,8 @@
 }
 
 .membership-options {
-    border: 2px solid #d1d1d6;
     padding: 1rem;
+    border: 2px solid #d1d1d6;
     border-radius: 6px;
 }
 
@@ -81,30 +81,31 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: 500;
     margin: 0.3rem 0;
+    font-weight: 500;
 }
 
-/* Submit button */
+/* Submit Button */
+
 .cta-btn {
-    background: #0072e3;
-    color: white;
+    margin-top: 1rem;
     padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    background: #0072e3;
+    color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1rem;
     transition: background 0.2s ease;
-    margin-top: 1rem;
 }
 
 .cta-btn:hover {
     background: #005bb7;
 }
 
-/* ============================
+/* =========================================================
    MEMBERSHIP CARDS
-============================ */
+========================================================= */
 
 .membership-cards {
     flex: 1;
@@ -115,14 +116,14 @@
 }
 
 .membership-cards .card {
-    background: white;
+    background: #fff;
     padding: 1rem;
-    border-radius: 10px;
-    border: 2px solid #dcdcdc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .membership-cards .card:hover {
@@ -141,9 +142,7 @@
     font-weight: 600;
 }
 
-/* ============================
-   CARD COLORS
-============================ */
+/* Card Accent Colors */
 
 .card.np {
     border-left: 6px solid #3d7d46;
@@ -161,29 +160,69 @@
     border-left: 6px solid #d4af37;
 }
 
-/* ============================
+/* =========================================================
+   MEMBERSHIP CARD LOAD ANIMATION
+========================================================= */
+
+/* Animation: cards fade + float up */
+.membership-cards .card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Staggered delays */
+.membership-cards .card:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.membership-cards .card:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.membership-cards .card:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.membership-cards .card:nth-child(4) {
+    animation-delay: .8s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
    MODAL WINDOWS
-============================ */
+========================================================= */
 
 .modal {
     display: none;
-    /* JS will make it flex */
+    /* JS toggles to flex */
     position: fixed;
     inset: 0;
+    padding: 1rem;
     background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     z-index: 10000;
 }
 
 .modal-content {
-    background: white;
-    padding: 1.5rem;
+    position: relative;
     max-width: 500px;
     width: 100%;
+    padding: 1.5rem;
+    background: #fff;
     border-radius: 10px;
-    position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -195,15 +234,15 @@
     position: absolute;
     top: 12px;
     right: 14px;
+    font-size: 1.5rem;
     background: none;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* ============================
+/* =========================================================
    RESPONSIVE DESIGN
-============================ */
+========================================================= */
 
 @media (min-width: 900px) {
     .join-layout {

@@ -4,195 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join the Chamber | Pasig City Chamber of Commerce</title>
+
+    <title>Pasig City Chamber of Commerce | Home</title>
+
+    <meta name="description"
+        content="The Pasig City Chamber of Commerce supports local businesses through networking, advocacy, and economic growth opportunities.">
+    <meta name="author" content="Charles Nephi Salva">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/larger.css">
-    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/chamber-specific.css">
 
     <!-- Scripts -->
     <script defer src="../scripts/navigation.js"></script>
     <script defer src="../scripts/date.js"></script>
-    <script defer src="scripts/modals.js"></script>
-    <script defer src="scripts/timestamp.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/events.js"></script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pasig City Chamber of Commerce">
+    <meta property="og:description" content="Connecting and strengthening Pasig City’s business community.">
+    <meta property="og:image"
+        content="https://charlessalva.github.io/wdd231/chamber/images/pasig-city-chamber-of-commerce.png">
+    <meta property="og:url" content="https://charlessalva.github.io/wdd231/chamber/index.html" >
+    <meta property="og:type" content="website">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="site-header">
             <div class="branding">
-                <img src="images/logo.svg" class="logo" alt="Chamber logo">
+                <img src="images/logo.svg" alt="Pasig City Chamber of Commerce logo" class="logo">
                 <span class="site-name">Pasig City Chamber of Commerce</span>
             </div>
 
-            <button id="menu">☰</button>
+            <button id="menu" aria-label="Open navigation menu">☰</button>
 
             <nav id="nav-bar">
                 <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="index.html">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="directory.html">Business Directory</a></li>
-                    <li class="current"><a href="join.html">Join</a></li>
+                    <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="join-main">
+    <!-- MAIN CONTENT -->
+    <main>
 
-        <h1>Join the Chamber</h1>
-        <p>Strengthen your business through networking, resources, and exclusive member benefits.</p>
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <picture>
+                <img src="images/pasig-city.jpg" alt="Scenic view of Pasig City" loading="lazy">
+            </picture>
+        
+            <div class="hero-overlay">
+                <h1>Supporting Pasig's Business Community</h1>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </div>
 
-        <div class="join-layout">
+        <!-- EVENTS SECTION -->
+        <div class="events-box">
+            <h2>Upcoming Events</h2>
+            <div id="events-container"></div>
+        </div>
 
-            <!-- LEFT — FORM -->
-            <section class="join-form-section">
-                <h2 class="section-header">Membership Application</h2>
+        <!-- WEATHER SECTION -->
+        <div class="weather-wrapper">
 
-                <form class="join-form" method="get" action="thankyou.html">
+            <!-- CURRENT WEATHER -->
+            <section class="current-weather">
+                <h2>Current Weather</h2>
 
-                    <label>
-                        First Name *
-                        <input type="text" required name="firstName" autocomplete="given-name"
-                            title="Enter your first name">
-                    </label>
+                <div class="weather-info">
+                    <div class="weather-main">
+                        <img id="weather-icon" src="../images/placeholder.png" alt="Weather icon">
+                        <p class="temp"><span id="current-temp"></span>°C</p>
+                    </div>
 
-                    <label>
-                        Last Name *
-                        <input type="text" required name="lastName" autocomplete="family-name"
-                            title="Enter your last name">
-                    </label>
-
-                    <label>
-                        Organizational Title
-                        <input type="text" name="orgTitle" autocomplete="organization-title"
-                            title="Minimum 7 letters, hyphens, and spaces allowed" pattern="[A-Za-z\- ]{7,}">
-                    </label>
-
-                    <label>
-                        Email Address *
-                        <input type="email" required name="email" autocomplete="email"
-                            placeholder="yourname@example.com" title="Enter a valid email address">
-                    </label>
-
-                    <label>
-                        Mobile Number *
-                        <input type="tel" required name="phone" autocomplete="tel" title="Enter your mobile number">
-                    </label>
-
-                    <label>
-                        Business / Organization Name *
-                        <input type="text" required name="organization" autocomplete="organization"
-                            title="Enter the business or organization name">
-                    </label>
-
-                    <fieldset class="membership-options">
-                        <legend>Membership Level *</legend>
-
-                        <label>
-                            <input type="radio" name="membership" value="np" required>
-                            Non-Profit (np)
-                        </label>
-
-                        <label>
-                            <input type="radio" name="membership" value="bronze">
-                            Bronze (bronze)
-                        </label>
-
-                        <label>
-                            <input type="radio" name="membership" value="silver">
-                            Silver (silver)
-                        </label>
-
-                        <label>
-                            <input type="radio" name="membership" value="gold">
-                            Gold (gold)
-                        </label>
-                    </fieldset>
-
-                    <label>
-                        Business Description
-                        <textarea name="description" title="Describe your organization"></textarea>
-                    </label>
-
-                    <input type="hidden" id="timestamp" name="timestamp">
-
-                    <input type="submit" value="Submit Application">
-                </form>
+                    <p id="weather-desc"></p>
+                    <p>High: <span id="high-temp"></span>°C</p>
+                    <p>Low: <span id="low-temp"></span>°C</p>
+                    <p>Humidity: <span id="humidity"></span>%</p>
+                    <p>Sunrise: <span id="sunrise"></span></p>
+                    <p>Sunset: <span id="sunset"></span></p>
+                </div>
             </section>
 
-            <!-- RIGHT — MEMBERSHIP LEVEL CARDS -->
-            <section class="membership-cards">
-                <h2 class="section-header">Membership Levels</h2>
+            <!-- 3-DAY FORECAST -->
+            <section class="forecast">
+                <h2>3-Day Forecast</h2>
 
-                <div class="card np">
-                    <h3>NP Membership</h3>
-                    <a href="#" class="learn-more" data-modal="modal-np">Learn more</a>
+                <div class="forecast-day">
+                    <p id="day1-name"></p>
+                    <img id="day1-icon" src="../images/placeholder.png" class="forecast-icon" alt="">
+                    <span id="day1-temp"></span>°C
                 </div>
 
-                <div class="card bronze">
-                    <h3>Bronze Membership</h3>
-                    <a href="#" class="learn-more" data-modal="modal-bronze">Learn more</a>
+                <div class="forecast-day">
+                    <p id="day2-name"></p>
+                    <img id="day2-icon" src="../images/placeholder.png" class="forecast-icon" alt="">
+                    <span id="day2-temp"></span>°C
                 </div>
 
-                <div class="card silver">
-                    <h3>Silver Membership</h3>
-                    <a href="#" class="learn-more" data-modal="modal-silver">Learn more</a>
-                </div>
-
-                <div class="card gold">
-                    <h3>Gold Membership</h3>
-                    <a href="#" class="learn-more" data-modal="modal-gold">Learn more</a>
+                <div class="forecast-day">
+                    <p id="day3-name"></p>
+                    <img id="day3-icon" src="../images/placeholder.png" class="forecast-icon" alt="">
+                    <span id="day3-temp"></span>°C
                 </div>
             </section>
 
         </div>
 
-        <!-- MODALS -->
-        <div id="modal-np" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>NP Membership</h2>
-                <p>No fee. Includes access to community events, newsletters, and basic directory listing.</p>
-            </div>
-        </div>
-
-        <div id="modal-bronze" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Bronze Membership</h2>
-                <p>Includes NP benefits plus training sessions and discounted event access.</p>
-            </div>
-        </div>
-
-        <div id="modal-silver" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Silver Membership</h2>
-                <p>Includes Bronze benefits plus homepage spotlight rotation and enhanced directory placement.</p>
-            </div>
-        </div>
-
-        <div id="modal-gold" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Gold Membership</h2>
-                <p>Includes all benefits plus premium exposure, banner advertising, and VIP event invitations.</p>
+        <!-- SPOTLIGHTS -->
+        <div class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- JavaScript inserts spotlight cards here -->
             </div>
         </div>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <p>&copy; <span id="currentyear"></span> Pasig City Chamber of Commerce</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
+            <div class="footer-left">
+                <strong>Pasig City Chamber of Commerce</strong><br>
+                10 Market Avenue, Barangay San Nicolas<br>
+                Pasig City, Philippines 1600<br>
+                <a href="mailto:info@pasigchamber.org">info@pasigchamber.org</a><br>
+                +(63) 994-901-3342
+            </div>
+    
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://github.com/charlessalva" target="_blank"><img src="../images/github.svg"
+                            alt="GitHub logo"></a>
+                    <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank"><img
+                            src="../images/linkedin.svg" alt="LinkedIn logo"></a>
+                    <a href="https://x.com" target="_blank"><img src="../images/x-twitter.svg" alt="X logo"></a>
+                </div>
+            </div>
+    
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>Charles Nephi Salva</p>
+                <a href="https://charlessalva.github.io/wdd231/index.html">Course Home Page</a>
+                <p>&copy; <span id="currentyear"></span> Pasig City Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
         </div>
     </footer>
-
 </body>
 
 </html>

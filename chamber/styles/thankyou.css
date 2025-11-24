@@ -1,3 +1,7 @@
+/* =========================================================
+   THANK YOU PAGE — Layout
+========================================================= */
+
 .thankyou-main {
     max-width: 900px;
     margin: auto;
@@ -5,12 +9,16 @@
     text-align: center;
 }
 
+/* =========================================================
+   Confirmation Box Styling
+========================================================= */
+
 .confirmation-box {
-    background: #ffffff;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fff;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
-    padding: 2rem;
-    margin-top: 2rem;
     text-align: left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
@@ -21,10 +29,18 @@
     color: #333;
 }
 
+/* =========================================================
+   Submitted Detail Item
+========================================================= */
+
 .detail-item {
     padding: 0.5rem 0;
     font-size: 1.1rem;
 }
+
+/* =========================================================
+   Return Button
+========================================================= */
 
 .return-btn {
     display: inline-block;

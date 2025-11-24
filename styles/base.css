@@ -1,6 +1,7 @@
-/* ------------------------------
-   Base Styles (Mobile First)
------------------------------- */
+/* =========================================================
+   BASE STYLES — Mobile First
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,10 @@ body {
     padding: 0.5rem;
 }
 
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
+
 header {
     background-color: #1f2937;
     color: #fff;
@@ -44,7 +48,10 @@ header {
     font-size: 1.1rem;
 }
 
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 #menu {
     background: none;
     border: none;
@@ -83,7 +90,10 @@ header {
     background-color: #374151;
 }
 
-/* MAIN */
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
 main {
     padding: 1rem 0.5rem;
 }
@@ -97,7 +107,10 @@ h1 {
     padding-bottom: 0.25rem;
 }
 
-/* SECTION HEADERS */
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
 h2 {
     background-color: #1f2937;
     color: #fff;
@@ -107,7 +120,10 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* SECTION BOXES */
+/* =========================================================
+   SECTION BOXES
+========================================================= */
+
 section {
     background-color: #fff;
     border-radius: 6px;
@@ -116,7 +132,10 @@ section {
     overflow: hidden;
 }
 
-/* ABOUT / PHOTO CONTENT */
+/* =========================================================
+   ABOUT / PHOTO CONTENT
+========================================================= */
+
 .about-me p {
     padding: 0.75rem;
 }
@@ -124,13 +143,16 @@ section {
 .student-photo img {
     width: 100%;
     max-width: 300px;
-    display: block;
     margin: 0 auto 1rem;
+    display: block;
     border-radius: 6px;
     object-fit: cover;
 }
 
-/* COURSES */
+/* =========================================================
+   COURSES & CERTIFICATES
+========================================================= */
+
 .web-certificates {
     text-align: center;
     padding: 1rem;
@@ -138,8 +160,8 @@ section {
 
 .filters {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -177,7 +199,10 @@ section {
     background-color: #e8ffe8;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
     background-color: #1f2937;
     color: #fff;
@@ -197,14 +222,17 @@ footer {
     width: 30px;
     height: 30px;
     filter: invert(100%);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
 .social-links img:hover {
     transform: scale(1.1);
 }
 
-/* Directory Page */
+/* =========================================================
+   DIRECTORY PAGE
+========================================================= */
+
 .directory-page h1 {
     text-align: center;
     margin-bottom: 1rem;
@@ -220,9 +248,9 @@ footer {
 #members-container.grid-view,
 #spotlight-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 1rem;
     gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 #members-container.list-view {
@@ -248,8 +276,8 @@ footer {
 
 .list-view .member-card {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
 }
 
 .list-view .member-card img {

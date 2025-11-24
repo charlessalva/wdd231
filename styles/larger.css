@@ -1,11 +1,15 @@
-/* ------------------------------
-   Larger Screen Styles
------------------------------- */
+/* =========================================================
+   LARGER SCREEN STYLES (Min Width: 768px)
+========================================================= */
+
 @media screen and (min-width: 768px) {
+
+    /* Body */
     body {
         padding: 0;
     }
 
+    /* Menu & Navigation */
     #menu {
         display: none;
     }
@@ -36,12 +40,14 @@
         border-color: #374151;
     }
 
+    /* Main Layout */
     main {
         width: 90%;
         max-width: 1200px;
         margin: 1rem auto;
     }
 
+    /* About Section Grid */
     .about-photo-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -57,12 +63,14 @@
         max-width: 100%;
     }
 
+    /* Courses Grid */
     .course-list {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1rem;
         justify-items: center;
     }
 
+    /* Footer */
     footer {
         margin-top: 2rem;
     }
