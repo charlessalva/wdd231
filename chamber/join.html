@@ -2,38 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pasig City Chamber of Commerce</title>
-    <meta name="description" content="Pasig City Chamber of Commerce homepage.">
-    <meta name="author" content="Charles Nephi Salva">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="favicon.ico">
+    <title>Join the Chamber | Pasig City Chamber of Commerce</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
+    <!-- Styles -->
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="styles/chamber-specific.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/chamber-specific.css">
+    <link rel="stylesheet" href="styles/join.css">
 
-    <!-- Scripts -->
+    <!-- JS -->
     <script defer src="../scripts/navigation.js"></script>
     <script defer src="../scripts/date.js"></script>
-    <script defer src="scripts/weather.js"></script>
-    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/join.js"></script>
+
+    <style>
+        /* ✨ REQUIRED ANIMATION — triggers on page load */
+        .membership-cards .card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        .membership-cards .card:nth-child(1) {
+            animation-delay: .2s;
+        }
+
+        .membership-cards .card:nth-child(2) {
+            animation-delay: .4s;
+        }
+
+        .membership-cards .card:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+        .membership-cards .card:nth-child(4) {
+            animation-delay: .8s;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
 </head>
 
 <body>
+
     <header>
         <div class="site-header">
             <div class="branding">
-                <img src="images/logo.svg" alt="Site logo" class="logo" />
+                <img src="images/logo.svg" alt="Pasig City Chamber of Commerce logo" class="logo">
                 <span class="site-name">Pasig City Chamber of Commerce</span>
             </div>
-            <button id="menu" aria-label="Open navigation menu">☰</button>
+
+            <button id="menu">☰</button>
 
             <nav id="nav-bar">
                 <ul class="navigation">
@@ -46,14 +80,152 @@
         </div>
     </header>
 
-    <main>
+    <main class="join-main">
+
+        <h1>Join the Chamber</h1>
+        <p>Strengthen your business through networking, resources, and exclusive member benefits.</p>
+
+        <div class="join-layout">
+
+            <!-- FORM -->
+            <section class="join-form-section">
+                <h2 class="section-header">Membership Application</h2>
+
+                <form method="get" action="thankyou.html" class="join-form">
+
+                    <label for="firstName">First Name *
+                        <input id="firstName" type="text" name="firstName" title="Enter your first name" required
+                            autocomplete="given-name">
+                    </label>
+
+                    <label for="lastName">Last Name *
+                        <input id="lastName" type="text" name="lastName" title="Enter your last name" required
+                            autocomplete="family-name">
+                    </label>
+
+                    <label for="organizationTitle">Organizational Title
+                        <input id="organizationTitle" type="text" name="organizationTitle"
+                            title="Your job title, minimum 7 characters. Letters, spaces, and hyphens only."
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email">Email Address *
+                        <input id="email" type="email" name="email" title="Enter your email address" required
+                            autocomplete="email" placeholder="yourname@example.com">
+                    </label>
+
+                    <label for="phone">Mobile Number *
+                        <input id="phone" type="tel" name="phone" title="Enter your mobile phone number" required
+                            autocomplete="tel">
+                    </label>
+
+                    <label for="organization">Business / Organization Name *
+                        <input id="organization" type="text" name="organization"
+                            title="Enter your business or organization name" required autocomplete="organization">
+                    </label>
+
+                    <fieldset class="membership-options">
+                        <legend>Membership Level *</legend>
+
+                        <label><input type="radio" name="membership" value="np" required> NP Membership (np)</label>
+                        <label><input type="radio" name="membership" value="bronze"> Bronze Membership (bronze)</label>
+                        <label><input type="radio" name="membership" value="silver"> Silver Membership (silver)</label>
+                        <label><input type="radio" name="membership" value="gold"> Gold Membership (gold)</label>
+                    </fieldset>
+
+                    <label for="description">Business Description
+                        <textarea id="description" name="description"
+                            title="Brief description of your organization"></textarea>
+                    </label>
+
+                    <!-- Hidden timestamp required -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Submit Application" class="cta-btn">
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP CARDS -->
+            <aside class="membership-cards">
+                <h2 class="section-header">Membership Levels</h2>
+
+                <div class="card np" data-modal="modal-np">
+                    <h3>NP Membership</h3>
+                    <a href="#" class="learn-more" data-modal="modal-np">Learn more</a>
+                </div>
+
+                <div class="card bronze" data-modal="modal-bronze">
+                    <h3>Bronze Membership</h3>
+                    <a href="#" class="learn-more" data-modal="modal-bronze">Learn more</a>
+                </div>
+
+                <div class="card silver" data-modal="modal-silver">
+                    <h3>Silver Membership</h3>
+                    <a href="#" class="learn-more" data-modal="modal-silver">Learn more</a>
+                </div>
+
+                <div class="card gold" data-modal="modal-gold">
+                    <h3>Gold Membership</h3>
+                    <a href="#" class="learn-more" data-modal="modal-gold">Learn more</a>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <!-- MODALS -->
+        <div class="modal" id="modal-np">
+            <div class="modal-content">
+                <button class="close" aria-label="Close">&times;</button>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Access to community events</li>
+                    <li>Basic directory listing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-bronze">
+            <div class="modal-content">
+                <button class="close" aria-label="Close">&times;</button>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>Basic directory listing</li>
+                    <li>Event participation</li>
+                    <li>Networking opportunities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-silver">
+            <div class="modal-content">
+                <button class="close" aria-label="Close">&times;</button>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>Standard directory placement</li>
+                    <li>Event discounts</li>
+                    <li>Monthly newsletter</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-gold">
+            <div class="modal-content">
+                <button class="close" aria-label="Close">&times;</button>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>Premium directory placement</li>
+                    <li>Spotlight feature eligibility</li>
+                    <li>Exclusive networking events</li>
+                </ul>
+            </div>
+        </div>
 
     </main>
 
     <footer>
         <div class="footer-container">
-    
-            <!-- LEFT COLUMN -->
             <div class="footer-left">
                 <strong>Pasig City Chamber of Commerce</strong><br>
                 10 Market Avenue, Barangay San Nicolas<br>
@@ -61,23 +233,16 @@
                 <a href="mailto:info@pasigchamber.org">info@pasigchamber.org</a><br>
                 +(63) 994-901-3342
             </div>
-    
-            <!-- CENTER COLUMN -->
+
             <div class="footer-center">
                 <div class="social-links">
-                    <a href="https://github.com/charlessalva" target="_blank">
-                        <img src="../images/github.svg" alt="GitHub">
-                    </a>
-                    <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank">
-                        <img src="../images/linkedin.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://x.com" target="_blank">
-                        <img src="../images/x-twitter.svg" alt="X">
-                    </a>
+                    <a href="https://github.com/charlessalva" target="_blank"><img src="../images/github.svg"></a>
+                    <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank"><img
+                            src="../images/linkedin.svg"></a>
+                    <a href="https://x.com" target="_blank"><img src="../images/x-twitter.svg"></a>
                 </div>
             </div>
-    
-            <!-- RIGHT COLUMN -->
+
             <div class="footer-right">
                 <p>WDD231 Class Project</p>
                 <p>Charles Nephi Salva</p>
@@ -85,7 +250,6 @@
                 <p>&copy; <span id="currentyear"></span> Pasig City Chamber of Commerce</p>
                 <p>Last Modified: <span id="lastModified"></span></p>
             </div>
-    
         </div>
     </footer>
 

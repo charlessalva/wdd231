@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Pasig City Chamber of Commerce</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/chamber-specific.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+
+    <!-- JS -->
+    <script defer src="../scripts/navigation.js"></script>
+    <script defer src="../scripts/date.js"></script>
+    <script defer src="scripts/thankyou.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="site-header">
+            <div class="branding">
+                <img src="images/logo.svg" alt="Pasig City Chamber of Commerce logo" class="logo">
+                <span class="site-name">Pasig City Chamber of Commerce</span>
+            </div>
+
+            <button id="menu">☰</button>
+
+            <nav id="nav-bar">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="thankyou-main">
+
+        <h1>Thank You!</h1>
+        <p>Your membership application has been successfully submitted.</p>
+
+        <section class="confirmation-box">
+            <h2>Your Submission Details</h2>
+
+            <div id="confirmation-details">
+                <!-- JS will insert the submitted values here -->
+            </div>
+
+            <a href="join.html" class="cta-btn return-btn">Return</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <strong>Pasig City Chamber of Commerce</strong><br>
+                10 Market Avenue, Barangay San Nicolas<br>
+                Pasig City, Philippines 1600<br>
+                <a href="mailto:info@pasigchamber.org">info@pasigchamber.org</a><br>
+                +(63) 994-901-3342
+            </div>
+
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://github.com/charlessalva" target="_blank"><img src="../images/github.svg"></a>
+                    <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank"><img
+                            src="../images/linkedin.svg"></a>
+                    <a href="https://x.com" target="_blank"><img src="../images/x-twitter.svg"></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>Charles Nephi Salva</p>
+                <a href="https://charlessalva.github.io/wdd231/index.html">Course Home Page</a>
+                <p>&copy; <span id="currentyear"></span> Pasig City Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

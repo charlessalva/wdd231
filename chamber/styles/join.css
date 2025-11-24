@@ -1,0 +1,217 @@
+/* ============================
+   JOIN PAGE — Layout
+============================ */
+
+.join-main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-header {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ============================
+   FORM STYLING
+============================ */
+
+.join-form-section {
+    flex: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #333;
+    gap: 0.3rem;
+}
+
+.join-form input,
+.join-form textarea {
+    padding: 0.7rem;
+    border: 2px solid #d1d1d1;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.join-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.join-form input:focus,
+.join-form textarea:focus {
+    border-color: #0072e3;
+    outline: none;
+}
+
+.membership-options {
+    border: 2px solid #d1d1d6;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.membership-options legend {
+    padding: 0 0.3rem;
+    font-weight: 700;
+}
+
+.membership-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    margin: 0.3rem 0;
+}
+
+/* Submit button */
+.cta-btn {
+    background: #0072e3;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s ease;
+    margin-top: 1rem;
+}
+
+.cta-btn:hover {
+    background: #005bb7;
+}
+
+/* ============================
+   MEMBERSHIP CARDS
+============================ */
+
+.membership-cards {
+    flex: 1;
+}
+
+.membership-cards h2 {
+    margin-bottom: 1rem;
+}
+
+.membership-cards .card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid #dcdcdc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.membership-cards .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.membership-cards .card h3 {
+    margin-top: 0;
+}
+
+.membership-cards .card a {
+    margin-top: 0.5rem;
+    display: inline-block;
+    color: #0072e3;
+    font-weight: 600;
+}
+
+/* ============================
+   CARD COLORS
+============================ */
+
+.card.np {
+    border-left: 6px solid #3d7d46;
+}
+
+.card.bronze {
+    border-left: 6px solid #cd7f32;
+}
+
+.card.silver {
+    border-left: 6px solid #b5b5c8;
+}
+
+.card.gold {
+    border-left: 6px solid #d4af37;
+}
+
+/* ============================
+   MODAL WINDOWS
+============================ */
+
+.modal {
+    display: none;
+    /* JS will make it flex */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10000;
+}
+
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal .close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+
+@media (min-width: 900px) {
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .membership-cards {
+        max-width: 350px;
+    }
+}
