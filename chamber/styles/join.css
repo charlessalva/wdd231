@@ -39,7 +39,8 @@
     gap: 1.5rem;
 }
 
-.join-form label {
+/* Normal form labels */
+.join-form label:not(.radio-label) {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -66,6 +67,10 @@
     outline: none;
 }
 
+/* =========================================================
+   MEMBERSHIP OPTIONS (RADIO BUTTONS)
+========================================================= */
+
 .membership-options {
     padding: 1rem;
     border: 2px solid #d1d1d6;
@@ -77,7 +82,8 @@
     font-weight: 700;
 }
 
-.membership-options label {
+/* Radio button layout (fixed) */
+.radio-label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -107,7 +113,6 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    /* Animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.8s ease-out forwards;
@@ -146,7 +151,7 @@
     border-left: 6px solid #d4af37;
 }
 
-/* Staggered Animation Delays */
+/* Staggered Animation */
 .membership-cards .card:nth-child(1) {
     animation-delay: .2s;
 }
@@ -200,14 +205,10 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-.modal-content h2 {
-    margin-top: 0;
-}
-
 .modal .close {
     position: absolute;
-    top: 12px;
-    right: 14px;
+    top: 2px;
+    right: 10px;
     font-size: 1.5rem;
     background: none;
     border: none;

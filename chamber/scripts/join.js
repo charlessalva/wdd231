@@ -8,7 +8,7 @@ document.querySelectorAll(".learn-more").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
         const modalId = link.dataset.modal;
-        document.getElementById(modalId).style.display = "block";
+        document.getElementById(modalId).style.display = "flex";
     });
 });
 
