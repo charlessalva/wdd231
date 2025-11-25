@@ -1,5 +1,5 @@
 /* =========================================================
-   LARGER SCREEN STYLES (Min Width: 768px)
+   LARGER SCREEN STYLES (CLEANED)
 ========================================================= */
 
 @media screen and (min-width: 768px) {
@@ -9,13 +9,13 @@
         padding: 0;
     }
 
-    /* Menu & Navigation */
+    /* Navigation */
     #menu {
         display: none;
     }
 
     #nav-bar {
-        display: block ;
+        display: block;
     }
 
     .navigation {
@@ -31,12 +31,12 @@
     .navigation a {
         padding: 0.75rem 1rem;
         border: 2px solid transparent;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
     .navigation a:hover,
     .navigation .current a {
-        background-color: #374151;
+        background: #374151;
         border-color: #4a5a73;
     }
 
@@ -66,8 +66,8 @@
     /* Courses Grid */
     .course-list {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1rem;
         justify-items: center;
+        gap: 1rem;
     }
 
     /* Footer */

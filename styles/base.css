@@ -1,5 +1,5 @@
 /* =========================================================
-   BASE STYLES — Mobile First
+   BASE STYLES — Mobile First (CLEANED)
 ========================================================= */
 
 * {
@@ -10,7 +10,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
     color: #222;
     line-height: 1.6;
     padding: 0.5rem;
@@ -21,7 +21,7 @@ body {
 ========================================================= */
 
 header {
-    background-color: #1f2937;
+    background: #1f2937;
     color: #fff;
     padding: 1rem;
 }
@@ -62,7 +62,7 @@ header {
 
 #nav-bar {
     display: none;
-    background-color: #1f2937;
+    background: #1f2937;
 }
 
 #nav-bar.show {
@@ -83,11 +83,12 @@ header {
     padding: 0.8rem;
     text-decoration: none;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .navigation a:hover,
 .navigation .current a {
-    background-color: #374151;
+    background: #374151;
 }
 
 /* =========================================================
@@ -112,7 +113,7 @@ h1 {
 ========================================================= */
 
 h2 {
-    background-color: #1f2937;
+    background: #1f2937;
     color: #fff;
     font-size: 1.1rem;
     padding: 0.5rem;
@@ -125,7 +126,7 @@ h2 {
 ========================================================= */
 
 section {
-    background-color: #fff;
+    background: #fff;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 1rem;
@@ -168,19 +169,20 @@ section {
 
 .filter-btn,
 .hero-btn {
-    background-color: #ddd;
+    background: #ddd;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .filter-btn.active,
 .hero-btn.active,
 .filter-btn:hover,
 .hero-btn:hover {
-    background-color: #1f2937;
+    background: #1f2937;
     color: #fff;
 }
 
@@ -196,7 +198,7 @@ section {
 }
 
 .completed {
-    background-color: #e8ffe8;
+    background: #e8ffe8;
 }
 
 /* =========================================================
@@ -204,7 +206,7 @@ section {
 ========================================================= */
 
 footer {
-    background-color: #1f2937;
+    background: #1f2937;
     color: #fff;
     text-align: center;
     padding: 1rem;
