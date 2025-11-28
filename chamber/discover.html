@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pasig City Chamber of Commerce</title>
-    <meta name="description" content="Pasig City Chamber of Commerce homepage.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Pasig City | Pasig City Chamber of Commerce</title>
+    <meta name="description" content="Explore the places, culture, and developments that make Pasig City thrive.">
     <meta name="author" content="Charles Nephi Salva">
 
     <link rel="icon" href="favicon.ico">
@@ -15,25 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="styles/chamber-specific.css">
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/chamber-specific.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
     <!-- Scripts -->
     <script defer src="../scripts/navigation.js"></script>
     <script defer src="../scripts/date.js"></script>
-    <script defer src="scripts/weather.js"></script>
-    <script defer src="scripts/directory.js"></script>
+    <script defer type="module" src="scripts/discover.js"></script>
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="site-header">
             <div class="branding">
-                <img src="images/logo.svg" alt="Site logo" class="logo" />
+                <img src="images/logo.svg" alt="Pasig Chamber logo" class="logo">
                 <span class="site-name">Pasig City Chamber of Commerce</span>
             </div>
-            <button id="menu" aria-label="Open navigation menu">☰</button>
+
+            <button id="menu">☰</button>
 
             <nav id="nav-bar">
                 <ul class="navigation">
@@ -46,7 +49,20 @@
         </div>
     </header>
 
-    <main>
+    <!-- MAIN CONTENT -->
+    <main class="discover">
+
+        <!-- LAST VISIT MESSAGE -->
+        <section class="visit-message" id="visitMessage"></section>
+
+        <h1>Discover Pasig City</h1>
+        <p class="intro">Explore the culture, history, and key destinations that make Pasig a vibrant community for
+            residents and businesses.</p>
+
+        <!-- GRID GALLERY -->
+        <section class="discover-grid" id="discoverGrid">
+            <!-- JS injects 8 cards -->
+        </section>
 
     </main>
 
