@@ -28,10 +28,10 @@
 
 /* CARD */
 .card {
-    border: 1px solid #e6eefc;
+    border: 1px solid black;
     padding: 1rem;
     border-radius: 10px;
-    background: #fff;
+    background: var(--bg);
     display: flex;
     flex-direction: column;
     gap: .75rem;
@@ -52,10 +52,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f7f9ff;
-    border: 1px solid #e6eefc;
-    border-radius: 6px;
-    padding: 4px;
+    border: 1px solid gray;
+    border-radius: 10px;
+
 }
 
 .logo {
@@ -71,10 +70,11 @@
 
 .card h3 {
     margin: 0 0 .1rem;
+    color: var(--primary);
 }
 
 .meta {
-    color: #6c7a99;
+    color: var(--accent);
     font-size: .85rem;
     margin-bottom: .25rem;
 }
@@ -83,25 +83,28 @@
 .time {
     margin: 0;
     font-size: .9rem;
+    color: var(--text);
 }
 
 /* Description */
 .desc {
     font-size: .9rem;
-    color: #444;
+    color: var(--text);
 }
 
 /* More details button */
 .more {
     padding: .5rem .75rem;
     border-radius: 6px;
-    background: #f0f4ff;
-    border: 1px solid #cbd7ff;
+    background: var(--accent-light);
+    border: 1px solid var(--accent);
     cursor: pointer;
+    color: var(--primary-dark);
 }
 
 .more:hover {
-    background: #e6eeff;
+    background: var(--accent);
+    color: #fff;
 }
 
 /* Favorites */
@@ -109,7 +112,7 @@
     border: none;
     background: transparent;
     font-size: 1.4rem;
-    color: #b7b7b7;
+    color: var(--muted);
     cursor: pointer;
 }
 
@@ -133,7 +136,7 @@
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--bg);
     padding: 1.25rem;
     max-width: 700px;
     width: 100%;
