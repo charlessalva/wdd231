@@ -1,0 +1,284 @@
+/* =========================================================
+   FINWISE BASE STYLES — MOBILE FIRST
+========================================================= */
+
+/* -------------------------
+   VARIABLES
+------------------------- */
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --accent: #0b6cf5;
+    --accent-dark: #084db3;
+    --muted: #666;
+    --radius: 8px;
+    --max-width: 1100px;
+
+    --header-bg: #f8fafc;
+    --footer-bg: #f4f6f8;
+
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* -------------------------
+   RESET
+------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+a:hover {
+    color: var(--accent-dark);
+}
+
+/* -------------------------
+   GLOBAL STRUCTURE
+------------------------- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0.2rem 0 0.6rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+/* -------------------------
+   BUTTONS
+------------------------- */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-dark);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.site-header {
+    background: var(--header-bg);
+    border-bottom: 1px solid #e6eefc;
+    padding: 1rem;
+}
+
+.site-header .branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-header .logo {
+    width: 55px;
+    height: 55px;
+}
+
+.site-header .site-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* ============================
+   NAVIGATION (Mobile First)
+============================ */
+#menu {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+#nav-bar {
+    display: none;
+    background: var(--header-bg);
+}
+
+#nav-bar.show {
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+    text-align: center;
+}
+
+.navigation li {
+    border-top: 1px solid #e6eefc;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.navigation a:hover,
+.navigation .current a {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* =========================================================
+   MAIN AREA
+============================================================ */
+main {
+    padding: 1rem 0;
+}
+
+/* Section headers */
+.section-title {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* =========================================================
+   CARDS & COMMON COMPONENTS
+========================================================= */
+
+/* Simple reusable card */
+.card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+    border-radius: var(--radius);
+}
+
+/* Grid layout helper */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.site-footer {
+    background: var(--footer-bg);
+    padding: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(90%) hue-rotate(190deg);
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: var(--radius);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* =========================================================
+   MEDIA QUERIES
+========================================================= */
+@media (min-width: 700px) {
+
+    /* Navigation becomes horizontal */
+    #nav-bar {
+        display: block !important;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        border: none;
+    }
+
+    .navigation li {
+        border: none;
+    }
+
+    .navigation a {
+        padding: 0.6rem 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    /* 3-column grid pattern */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

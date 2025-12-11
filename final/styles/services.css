@@ -1,0 +1,152 @@
+/* FILTER CONTROLS */
+.controls {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 980px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CARD */
+.card {
+    border: 1px solid #e6eefc;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+/* TOP ROW: LOGO + TEXT + FAVORITE */
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* LOGO WRAPPER */
+.logo-wrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9ff;
+    border: 1px solid #e6eefc;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* INFO SECTION */
+.card-info {
+    flex: 1;
+}
+
+.card h3 {
+    margin: 0 0 .1rem;
+}
+
+.meta {
+    color: #6c7a99;
+    font-size: .85rem;
+    margin-bottom: .25rem;
+}
+
+.fee,
+.time {
+    margin: 0;
+    font-size: .9rem;
+}
+
+/* Description */
+.desc {
+    font-size: .9rem;
+    color: #444;
+}
+
+/* More details button */
+.more {
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    background: #f0f4ff;
+    border: 1px solid #cbd7ff;
+    cursor: pointer;
+}
+
+.more:hover {
+    background: #e6eeff;
+}
+
+/* Favorites */
+.fav {
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    color: #b7b7b7;
+    cursor: pointer;
+}
+
+.fav:hover {
+    color: gold;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .45);
+    padding: 1rem;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 1.25rem;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+/* form.css */
+.form-page,
+.form-result {
+    padding: 1rem 0
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    max-width: 600px
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: .95rem
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: .6rem;
+    border: 1px solid #e6eefc;
+    border-radius: 6px
+}

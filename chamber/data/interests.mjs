@@ -44,7 +44,7 @@ export const interests = [
     {
         "name": "Lopez Museum & Library",
         "address": "Benpres Building, Pasig City",
-        "image": "images/lopez.webp",
+        "image": "images/lopez.png",
         "description": "A cultural institution showcasing Philippine art, archives, and historical collections."
     },
     {

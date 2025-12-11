@@ -1,0 +1,25 @@
+/* home.css */
+.hero {
+    padding: 2rem 0;
+    background: linear-gradient(180deg, #fff, #f6fbff)
+}
+
+.hero-inner {
+    display: grid;
+    gap: 1rem
+}
+
+.features {
+    display: grid;
+    gap: 1rem
+}
+
+@media(min-width:700px) {
+    .hero-inner {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
