@@ -10,6 +10,13 @@
 
 
         /* -------------------------
+           Last Modified
+        ------------------------- */
+        const modifiedEl = document.getElementById('lastModified');
+        if (modifiedEl) modifiedEl.textContent = document.lastModified;
+
+
+        /* -------------------------
            Mobile nav toggle + hamburger animation
         ------------------------- */
         const btn = document.getElementById('nav-toggle');

@@ -55,43 +55,114 @@
         </div>
     </header>
 
-    <main class="container form-page">
-        <h1>Contact FinWise PH</h1>
-        <form action="form-action.html" method="get" class="contact-form" novalidate>
-            <label>
-                Full name
-                <input type="text" name="name" required>
-            </label>
-
-            <label>
-                Email
-                <input type="email" name="email" required>
-            </label>
-
-            <label>
-                Topic
-                <select name="topic" required>
-                    <option value=""></option>
-                    <option value="suggestion">Suggestion</option>
-                    <option value="correction">Correction</option>
-                    <option value="other">Other</option>
-                </select>
-
-            </label>
-
-            <label>
-                Message
-                <textarea name="message" rows="5" required></textarea>
-            </label>
-
-            <button type="submit" class="btn">Send</button>
-        </form>
+    <main class="container contact-layout">
+    
+        <section class="contact-left">
+            <h1>Send Us a Message</h1>
+            <p class="subtitle">Have a question or feedback? Fill out the form and we’ll get back to you as soon as
+                possible.</p>
+    
+            <form action="form-action.html" method="get" class="contact-form" novalidate>
+    
+                <label>
+                    Full Name *
+                    <input type="text" name="name" required placeholder="John Smith">
+                </label>
+    
+                <label>
+                    Email Address *
+                    <input type="email" name="email" required placeholder="you@example.com">
+                </label>
+    
+                <label>
+                    Topic *
+                    <select name="topic" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="correction">Correction</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+    
+                <label>
+                    Message *
+                    <textarea name="message" rows="5" required placeholder="Tell us what's on your mind..."></textarea>
+                </label>
+    
+                <button type="submit" class="btn submit-btn">Send Message</button>
+    
+            </form>
+        </section>
+    
+        <section class="contact-right">
+            <h2>Get In Touch</h2>
+    
+            <div class="info-card">
+                <h3>Email</h3>
+                <p>info@finwiseph.com</p>
+                <p>support@finwiseph.com</p>
+            </div>
+    
+            <div class="info-card">
+                <h3>Phone</h3>
+                <p>+63 900 000 0000</p>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+    
+            <div class="info-card">
+                <h3>Location</h3>
+                <p>Manila, Philippines</p>
+            </div>
+    
+            <div class="info-card">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+    
+        </section>
+    
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> FinWise PH. Author: Charles Nephi Salva.</p>
-            <p><a href="attributions.html">Attributions</a></p>
+
+    <footer class="site-footer enhanced-footer">
+        <div class="footer-container">
+    
+            <!-- LEFT -->
+            <div class="footer-left">
+                <strong>FinWise PH</strong><br>
+                Manila, Philippines<br>
+                <a href="mailto:contact@finwiseph.com">contact@finwiseph.com</a><br>
+                +63 900 000 0000
+            </div>
+    
+            <!-- CENTER (Socials) -->
+            <div class="footer-center">
+                <div class="social-links">
+                    <a href="https://github.com/charlessalva" target="_blank">
+                        <img src="../images/github.svg" alt="GitHub logo">
+                    </a>
+    
+                    <a href="https://www.linkedin.com/in/charlesnephisalva" target="_blank">
+                        <img src="../images/linkedin.svg" alt="LinkedIn logo">
+                    </a>
+    
+                    <a href="https://x.com" target="_blank">
+                        <img src="../images/x-twitter.svg" alt="X logo">
+                    </a>
+                </div>
+            </div>
+    
+            <!-- RIGHT -->
+            <div class="footer-right">
+                <p>FinWise PH | WDD231 Final Project</p>
+                <p>Charles Nephi Salva</p>
+                <a href="../index.html">Course Home Page</a>
+                <p>&copy; <span id="year"></span> FinWise PH</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+    
         </div>
     </footer>
 </body>

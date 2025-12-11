@@ -107,7 +107,7 @@ h3 {
 }
 
 .btn:hover {
-    background: var(--primary);
+    background: white;
 }
 
 /* =========================================================
@@ -225,6 +225,76 @@ main {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: var(--text);
+}
+
+/* =========================================================
+   ENHANCED FOOTER (3-column layout)
+========================================================= */
+
+.enhanced-footer {
+    text-align: left;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: auto;
+    gap: 2rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+/* Links */
+.footer-left a,
+.footer-right a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Social Icons (reuse your existing style) */
+.enhanced-footer .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(15%);
+}
+
+.enhanced-footer .social-links img:hover {
+    transform: scale(1.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
 }
 
 .social-links {
